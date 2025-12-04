@@ -11,15 +11,15 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-org.github.io',
+  url: 'https://jahansher333.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/physical-ai-robotics-book/',
+  baseUrl: '/ai_native_book/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-org', // Usually your GitHub org/user name.
-  projectName: 'physical-ai-robotics-book', // Usually your repo name.
+  organizationName: 'jahansher333', // Usually your GitHub org/user name.
+  projectName: 'ai_native_book', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -74,7 +74,7 @@ const config = {
             label: 'Book',
           },
           {
-            href: 'https://github.com/your-org/physical-ai-robotics-book',
+            href: 'https://github.com/jahansher333/ai_native_book',
             label: 'GitHub',
             position: 'right',
           },
@@ -126,7 +126,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/your-org/physical-ai-robotics-book',
+                href: 'https://github.com/jahansher333/ai_native_book',
               },
             ],
           },
