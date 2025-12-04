@@ -1,0 +1,65 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#f9f9f9"/>
+  <text x="400" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">Digital Twin Simulation Workflow</text>
+
+  <!-- Physical Robot -->
+  <rect x="50" y="80" width="180" height="100" fill="#FF6B6B" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="140" y="110" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">Physical Robot</text>
+  <text x="140" y="135" font-size="12" text-anchor="middle" fill="#fff">• Sensors</text>
+  <text x="140" y="155" font-size="12" text-anchor="middle" fill="#fff">• Actuators</text>
+
+  <!-- Bi-directional arrow -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333" />
+    </marker>
+  </defs>
+  <line x1="230" y1="120" x2="310" y2="120" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="310" y1="140" x2="230" y2="140" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="270" y="115" font-size="11" text-anchor="middle" fill="#555">Data Sync</text>
+
+  <!-- Digital Twin -->
+  <rect x="310" y="80" width="180" height="100" fill="#4ECDC4" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="110" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">Digital Twin</text>
+  <text x="400" y="135" font-size="12" text-anchor="middle" fill="#fff">Gazebo / Isaac Sim</text>
+  <text x="400" y="155" font-size="12" text-anchor="middle" fill="#fff">Physics Engine</text>
+
+  <!-- Simulation arrow -->
+  <line x1="490" y1="130" x2="570" y2="130" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="530" y="120" font-size="11" text-anchor="middle" fill="#555">Sim Data</text>
+
+  <!-- Control System -->
+  <rect x="570" y="80" width="180" height="100" fill="#95E1D3" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="660" y="110" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Control System</text>
+  <text x="660" y="135" font-size="12" text-anchor="middle" fill="#333">• Motion Planning</text>
+  <text x="660" y="155" font-size="12" text-anchor="middle" fill="#333">• Behavior Logic</text>
+
+  <!-- Testing Phase -->
+  <rect x="50" y="230" width="700" height="80" fill="#FFE66D" stroke="#333" stroke-width="3" rx="5"/>
+  <text x="400" y="260" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Testing & Validation</text>
+  <text x="400" y="285" font-size="13" text-anchor="middle" fill="#555">1. Test in Simulation  →  2. Validate Safety  →  3. Deploy to Physical Robot</text>
+
+  <!-- Process Steps -->
+  <g>
+    <rect x="80" y="360" width="150" height="60" fill="#A8E6CF" stroke="#333" stroke-width="2" rx="5"/>
+    <text x="155" y="385" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">Step 1: Model</text>
+    <text x="155" y="405" font-size="11" text-anchor="middle" fill="#555">URDF + Physics</text>
+
+    <rect x="270" y="360" width="150" height="60" fill="#A8E6CF" stroke="#333" stroke-width="2" rx="5"/>
+    <text x="345" y="385" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">Step 2: Simulate</text>
+    <text x="345" y="405" font-size="11" text-anchor="middle" fill="#555">Test Scenarios</text>
+
+    <rect x="460" y="360" width="150" height="60" fill="#A8E6CF" stroke="#333" stroke-width="2" rx="5"/>
+    <text x="535" y="385" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">Step 3: Deploy</text>
+    <text x="535" y="405" font-size="11" text-anchor="middle" fill="#555">Hardware Transfer</text>
+  </g>
+
+  <!-- Flow arrows between steps -->
+  <line x1="230" y1="390" x2="270" y2="390" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="420" y1="390" x2="460" y2="390" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Feedback loop -->
+  <path d="M 610 420 Q 650 450, 610 480 Q 400 500, 190 480 Q 150 450, 190 420"
+        stroke="#FF6B6B" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <text x="400" y="490" font-size="11" text-anchor="middle" fill="#FF6B6B">Continuous Improvement Loop</text>
+</svg>
