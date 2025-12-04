@@ -1,0 +1,59 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f9f9f9"/>
+  <text x="400" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">ROS 2 Node Communication Architecture</text>
+
+  <!-- Node 1 -->
+  <rect x="50" y="100" width="150" height="80" fill="#4A90E2" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="125" y="135" font-size="14" font-weight="bold" text-anchor="middle" fill="#fff">Camera Node</text>
+  <text x="125" y="155" font-size="12" text-anchor="middle" fill="#fff">(Publisher)</text>
+
+  <!-- Node 2 -->
+  <rect x="325" y="100" width="150" height="80" fill="#7ED321" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="135" font-size="14" font-weight="bold" text-anchor="middle" fill="#fff">Object Detector</text>
+  <text x="400" y="155" font-size="12" text-anchor="middle" fill="#fff">(Sub + Pub)</text>
+
+  <!-- Node 3 -->
+  <rect x="600" y="100" width="150" height="80" fill="#F5A623" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="675" y="135" font-size="14" font-weight="bold" text-anchor="middle" fill="#fff">Motion Planner</text>
+  <text x="675" y="155" font-size="12" text-anchor="middle" fill="#fff">(Subscriber)</text>
+
+  <!-- Topic 1 -->
+  <ellipse cx="240" cy="140" rx="60" ry="30" fill="#E0E0E0" stroke="#666" stroke-width="2"/>
+  <text x="240" y="138" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">/camera/</text>
+  <text x="240" y="150" font-size="12" text-anchor="middle" fill="#333">image</text>
+
+  <!-- Topic 2 -->
+  <ellipse cx="515" cy="140" rx="70" ry="30" fill="#E0E0E0" stroke="#666" stroke-width="2"/>
+  <text x="515" y="138" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">/detections</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333" />
+    </marker>
+  </defs>
+
+  <line x1="200" y1="140" x2="180" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="300" y1="140" x2="325" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="475" y1="140" x2="445" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="585" y1="140" x2="600" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- DDS Layer -->
+  <rect x="50" y="250" width="700" height="60" fill="#D8D8D8" stroke="#666" stroke-width="2" rx="5"/>
+  <text x="400" y="275" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">DDS Middleware Layer</text>
+  <text x="400" y="295" font-size="12" text-anchor="middle" fill="#555">(Data Distribution Service - Pub/Sub Infrastructure)</text>
+
+  <!-- Connections to DDS -->
+  <line x1="125" y1="180" x2="125" y2="250" stroke="#999" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="400" y1="180" x2="400" y2="250" stroke="#999" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="675" y1="180" x2="675" y2="250" stroke="#999" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Legend -->
+  <text x="50" y="345" font-size="12" font-weight="bold" fill="#333">Legend:</text>
+  <rect x="50" y="355" width="20" height="15" fill="#4A90E2"/>
+  <text x="75" y="367" font-size="11" fill="#333">Publisher Node</text>
+  <ellipse cx="210" cy="362" rx="25" ry="12" fill="#E0E0E0" stroke="#666"/>
+  <text x="245" y="367" font-size="11" fill="#333">Topic (Message Bus)</text>
+  <line x1="350" y1="362" x2="400" y2="362" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="410" y="367" font-size="11" fill="#333">Message Flow</text>
+</svg>

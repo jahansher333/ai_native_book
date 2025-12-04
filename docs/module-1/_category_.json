@@ -1,0 +1,8 @@
+{
+  "label": "Module 1: ROS 2 Nervous System",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn Robot Operating System 2 fundamentals, URDF modeling, and node communication patterns."
+  }
+}
